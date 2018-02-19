@@ -22,7 +22,7 @@ An Android app project to test life cycle event. Defines global counter which ge
 <img src="images/Android Emulator - Nexus_5X_API_265554 2018-02-18 18-58-19.png">
 
 
-#### Broadcast message is received in TestReceiver class.
+#### Dialog box.
 <img src="images/Android Emulator - Nexus_5X_API_265554 2018-02-18 18-58-37.png">
 
 ## Code - Counter is maintained in Base application class by extending Application
