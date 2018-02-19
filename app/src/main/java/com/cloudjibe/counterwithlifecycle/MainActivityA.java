@@ -3,6 +3,8 @@ package com.cloudjibe.counterwithlifecycle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -45,6 +47,7 @@ public class MainActivityA extends AppCompatActivity {
 //        intent.putExtra(EXTRA_MESSAGE, message);
        // startActivity(intent);
     }
+
 
     public void startActivityB(View v) {
         int s = ((BaseApplicationClass) getApplication()).getCounterVar();
@@ -115,11 +118,17 @@ public class MainActivityA extends AppCompatActivity {
         tvTotal.setText("Thread Counter: "+s);
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
         // set counter increment
         ((BaseApplicationClass) getApplication()).setIncrementCounterVar();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     public void finishActivityA(View v) {
